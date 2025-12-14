@@ -17,7 +17,7 @@ export function Demo() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-nukhba-white mb-6"
           >
-            شوف البوت وهو <span className="text-nukhba-gold">شغال</span>
+            شوف البوت وهو <span className="text-nukhba-gold">يشتغل</span>
           </motion.h2>
         </div>
 

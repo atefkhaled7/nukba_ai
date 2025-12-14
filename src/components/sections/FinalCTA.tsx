@@ -22,7 +22,7 @@ export function FinalCTA() {
               className="text-3xl md:text-5xl font-bold text-nukhba-black mb-6"
             >
               جاهز تبدأ؟ <br />
-              خلّي البوت يشتغل بدل فريق خدمة العملاء
+              خلّ البوت يشتغل بدال فريق خدمة العملاء
             </motion.h2>
             
             <motion.p

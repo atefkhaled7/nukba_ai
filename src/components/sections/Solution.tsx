@@ -47,7 +47,7 @@ export function Solution() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-nukhba-white mb-6"
           >
-            شات بوت يعمل بدل فريق خدمة العملاء — <span className="text-nukhba-gold">بدون تعب</span>
+            شات بوت يشتغل بدال فريق خدمة العملاء — <span className="text-nukhba-gold">بدون تعب</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -56,8 +56,8 @@ export function Solution() {
             transition={{ delay: 0.1 }}
             className="text-lg text-gray-400"
           >
-            البوت اللي هنبنيه لك مش مجرد ردود جاهزة.
-            ده Bot ذكي يفهم الأسئلة، يتذكر العملاء، ويجاوب بالعربي/الإنجليزي بدقة عالية.
+            البوت اللي بنبنيه لك مو مجرد ردود جاهزة.
+            هذا Bot ذكي يفهم الأسئلة، يتذكر العملاء، ويجاوب بالعربي/الإنجليزي بدقة عالية.
           </motion.p>
         </div>
 

@@ -6,15 +6,15 @@ import { Clock, DollarSign, MessageSquare, Users, AlertCircle } from 'lucide-rea
 const painPoints = [
   {
     icon: Clock,
-    text: "العملاء عايزين رد فوري — التأخير = خسارة مبيعات",
+    text: "العملاء يبون رد فوري — التأخير = خسارة مبيعات",
   },
   {
     icon: DollarSign,
-    text: "تكلفة موظفين خدمة العملاء عالية",
+    text: "تكلفة فريق خدمة العملاء عالية",
   },
   {
     icon: MessageSquare,
-    text: "رسائل كتير بتتكرر كل يوم",
+    text: "رسائل كثيرة تتكرر يومياً",
   },
   {
     icon: Users,
@@ -37,7 +37,7 @@ export function PainPoints() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-nukhba-white mb-4"
           >
-            ليه الشركات محتاجة <span className="text-nukhba-gold">شات بوت ذكي؟</span>
+            ليه الشركات تحتاج <span className="text-nukhba-gold">شات بوت ذكي؟</span>
           </motion.h2>
           <div className="w-24 h-1 bg-nukhba-gold mx-auto rounded-full" />
         </div>
