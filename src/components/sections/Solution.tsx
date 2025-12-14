@@ -47,7 +47,7 @@ export function Solution() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-nukhba-white mb-6"
           >
-            شات بوت يشتغل بدال فريق خدمة العملاء — <span className="text-nukhba-gold">بدون تعب</span>
+            موظف استقبال ذكي لمطعمك، يرد ويسجل الطلبات 24/7.— <span className="text-nukhba-gold">باللهجة المحلية</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
