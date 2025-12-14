@@ -45,9 +45,11 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="primary" size="sm">
-              احجز مكالمة مجانية
-            </Button>
+            <Link href="#contact">
+              <Button variant="primary" size="sm">
+                احجز مكالمة مجانية
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -78,9 +80,11 @@ export function Navbar() {
               </Link>
             ))}
             <div className="mt-4 px-3">
-              <Button variant="primary" className="w-full">
-                احجز مكالمة مجانية
-              </Button>
+              <Link href="#contact" onClick={() => setIsOpen(false)}>
+                <Button variant="primary" className="w-full">
+                  احجز مكالمة مجانية
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

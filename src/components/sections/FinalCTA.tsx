@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { ArrowLeft, Send } from 'lucide-react';
 
 export function FinalCTA() {
   return (
-    <section className="py-20 bg-nukhba-gold relative overflow-hidden">
+    <section id="contact" className="py-20 bg-nukhba-gold relative overflow-hidden">
       <div className="absolute inset-0 bg-black/10 pattern-grid-lg opacity-10" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -41,10 +42,12 @@ export function FinalCTA() {
               transition={{ delay: 0.2 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button size="lg" className="bg-nukhba-black text-nukhba-gold hover:bg-nukhba-charcoal gap-2">
-                احجز مكالمة مجانية
-                <ArrowLeft className="w-5 h-5" />
-              </Button>
+              <Link href="#contact">
+                <Button size="lg" className="bg-nukhba-black text-nukhba-gold hover:bg-nukhba-charcoal gap-2">
+                  احجز مكالمة مجانية
+                  <ArrowLeft className="w-5 h-5" />
+                </Button>
+              </Link>
             </motion.div>
           </div>
 
@@ -57,12 +60,23 @@ export function FinalCTA() {
             className="bg-nukhba-black p-8 rounded-2xl shadow-2xl border border-nukhba-charcoal"
           >
             <h3 className="text-2xl font-bold text-nukhba-white mb-6">تواصل معنا</h3>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form 
+              className="space-y-4" 
+              action="https://formsubmit.co/atefkhaledua7@gmail.com" 
+              method="POST"
+            >
+              {/* FormSubmit Configuration */}
+              <input type="hidden" name="_subject" value="New Submission from Nukhba AI Landing Page" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">الاسم</label>
                 <input 
                   type="text" 
                   id="name" 
+                  name="name"
+                  required
                   className="w-full bg-nukhba-charcoal border border-nukhba-charcoal rounded-lg px-4 py-3 text-nukhba-white focus:outline-none focus:border-nukhba-gold transition-colors"
                   placeholder="اسمك الكريم"
                 />
@@ -72,6 +86,8 @@ export function FinalCTA() {
                 <input 
                   type="email" 
                   id="email" 
+                  name="email"
+                  required
                   className="w-full bg-nukhba-charcoal border border-nukhba-charcoal rounded-lg px-4 py-3 text-nukhba-white focus:outline-none focus:border-nukhba-gold transition-colors"
                   placeholder="name@company.com"
                 />
@@ -80,12 +96,14 @@ export function FinalCTA() {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-1">الرسالة</label>
                 <textarea 
                   id="message" 
+                  name="message"
+                  required
                   rows={4}
                   className="w-full bg-nukhba-charcoal border border-nukhba-charcoal rounded-lg px-4 py-3 text-nukhba-white focus:outline-none focus:border-nukhba-gold transition-colors resize-none"
                   placeholder="كيف يمكننا مساعدتك؟"
                 />
               </div>
-              <Button className="w-full gap-2" size="lg">
+              <Button type="submit" className="w-full gap-2" size="lg">
                 إرسال
                 <Send className="w-4 h-4" />
               </Button>

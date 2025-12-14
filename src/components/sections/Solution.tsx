@@ -22,7 +22,7 @@ const features = [
   {
     icon: MessageCircle,
     title: "WhatsApp + Messenger",
-    description: "تكامل كامل مع منصات المحادثة",
+    description: "تكامل كامل مع منصات المحادثة او موقعك الخاص",
   },
   {
     icon: Database,

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Check } from 'lucide-react';
 
@@ -106,12 +107,14 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Button 
-                variant={plan.popular ? 'primary' : 'outline'} 
-                className="w-full"
-              >
-                {plan.cta}
-              </Button>
+              <Link href="#contact" className="w-full block">
+                <Button 
+                  variant={plan.popular ? 'primary' : 'outline'} 
+                  className="w-full"
+                >
+                  {plan.cta}
+                </Button>
+              </Link>
             </motion.div>
           ))}
         </div>

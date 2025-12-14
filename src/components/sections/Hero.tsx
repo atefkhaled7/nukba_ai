@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { ArrowLeft, Play } from 'lucide-react';
 
@@ -43,10 +44,12 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button size="lg" className="w-full sm:w-auto gap-2">
-              احجز مكالمة مجانية
-              <ArrowLeft className="w-5 h-5" />
-            </Button>
+            <Link href="#contact" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full gap-2">
+                احجز مكالمة مجانية
+                <ArrowLeft className="w-5 h-5" />
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2">
               <Play className="w-5 h-5" />
               شاهد الديمو
