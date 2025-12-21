@@ -15,8 +15,6 @@ export default function Chatbot() {
         showWelcomeMessage: true,
         title: 'نخبة للذكاء الاصطناعي',
         subtitle: 'مساعدك الذكي للأتمتة',
-        mainColor: '#D4AF37',
-        bubbleColor: '#D4AF37',
         i18n: {
           en: {
             title: 'Nukhba AI',
@@ -26,6 +24,7 @@ export default function Chatbot() {
           }
         }
       });
+      console.log("n8n Chatbot: Initialized successfully");
     }).catch(err => {
       console.error("n8n Chatbot: Error loading package:", err);
     });
