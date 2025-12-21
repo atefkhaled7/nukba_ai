@@ -1,0 +1,35 @@
+"use client";
+
+import { useEffect } from "react";
+import "@n8n/chat/style.css";
+
+export default function Chatbot() {
+  useEffect(() => {
+    // استيراد المكتبة ديناميكياً فقط في المتصفح
+    import("@n8n/chat").then(({ createChat }) => {
+      createChat({
+        webhookUrl: 'https://atefkhaledua7.app.n8n.cloud/webhook/cbad2cc3-d9c0-41b8-a09a-6de720188f4d/chat',
+        webhookConfig: {
+          method: 'POST'
+        },
+        showWelcomeMessage: true,
+        title: 'نخبة للذكاء الاصطناعي',
+        subtitle: 'مساعدك الذكي للأتمتة',
+        mainColor: '#D4AF37',
+        bubbleColor: '#D4AF37',
+        i18n: {
+          en: {
+            title: 'Nukhba AI',
+            subtitle: 'Your automation assistant',
+            footer: 'Powered by Nukhba AI',
+            inputPlaceholder: 'Type your message...',
+          }
+        }
+      });
+    }).catch(err => {
+      console.error("n8n Chatbot: Error loading package:", err);
+    });
+  }, []);
+
+  return null;
+}
