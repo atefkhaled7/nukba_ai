@@ -114,6 +114,55 @@ html {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8) !important;
 }
 
-.chat-message {
-  max-width: 50% !important;
+/* تأثير النبض الذهبي حول حاوية الشات بالكامل لضمان الظهور */
+.n8n-chat-widget {
+  animation: n8n-pulse 2s infinite !important;
+  border-radius: 50% !important;
+  transition: transform 0.3s ease !important;
 }
+
+.n8n-chat-widget:hover {
+  transform: scale(1.1) !important;
+}
+
+@keyframes n8n-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+}
+
+/* حركة الاهتزاز */
+.n8n-chat-widget:not(:hover) {
+  animation: n8n-pulse 2s infinite, n8n-attention 5s infinite 2s !important;
+}
+
+.n8n-chat-widget--bubble:hover {
+  transform: scale(1.1) rotate(5deg) !important;
+}
+
+@keyframes n8n-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(212, 175, 55, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+}
+
+@keyframes n8n-attention {
+  0%, 90%, 100% { transform: rotate(0); }
+  92% { transform: rotate(-10deg); }
+  94% { transform: rotate(10deg); }
+  96% { transform: rotate(-10deg); }
+  98% { transform: rotate(10deg); }
+}
+

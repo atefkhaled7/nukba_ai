@@ -17,6 +17,10 @@ export default function Chatbot() {
             method: 'POST'
           },
           showWelcomeScreen: true,
+          // @ts-ignore
+          mainColor: '#D4AF37',
+          // @ts-ignore
+          bubbleColor: '#D4AF37',
           i18n: {
             en: {
               title: 'نخبة للذكاء الاصطناعي',
