@@ -16,17 +16,15 @@ export default function Chatbot() {
           webhookConfig: {
             method: 'POST'
           },
-          showWelcomeMessage: true,
-          title: 'نخبة للذكاء الاصطناعي',
-          subtitle: 'مساعدك الذكي للأتمتة',
+          showWelcomeScreen: true,
           i18n: {
             en: {
-              title: 'Nukhba AI',
-              subtitle: 'Your automation assistant',
+              title: 'نخبة للذكاء الاصطناعي',
+              subtitle: 'مساعدك الذكي للأتمتة',
               footer: 'Powered by Nukhba AI',
-              getStarted: 'Get Started',
-              inputPlaceholder: 'Type your message...',
-              closeButtonTooltip: 'Close Chat',
+              getStarted: 'ابدأ المحادثة',
+              inputPlaceholder: 'اكتب رسالتك هنا...',
+              closeButtonTooltip: 'إغلاق',
             }
           }
         });
